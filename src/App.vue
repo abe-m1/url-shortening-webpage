@@ -1,28 +1,108 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <Hero />
+    <Shorten />
+    <Statistics />
+    <Action />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import Hero from './components/Hero.vue';
+import Shorten from './components/Shorten.vue';
+import Statistics from './components/Statistics.vue';
+import Action from './components/Action.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    Hero,
+    Shorten,
+    Statistics,
+    Action,
+    Footer
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+//reset
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// color variables
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+//mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px
+  @include respond(phone) {
+    font-size: 50%; //1rem = 8px
+  }
+  @include respond(tab-land) {
+    font-size: 50%; //1rem = 8px
+  }
+  @include respond(tab-port) {
+    font-size: 56.25%; //1rem = 9px
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px
+  }
 }
 </style>
