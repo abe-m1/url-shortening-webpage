@@ -9,13 +9,31 @@
       </ul>
       <!-- <button class="button-gradient header-button">Login</button> -->
       <!-- <button class="button-gradient header-button">Sign Up</button> -->
-      <div class="hamburger">
+      <div class="hamburger" @click="onClick">
         <div class="hamburgerTop"></div>
         <div class="hamburgerMiddle"></div>
         <div class="hamburgerBottom"></div>
       </div>
     </header>
+
+     <div class="nav-container" 
+     :class="[
+      openNav ? 'show' : '',
+    ]">
+      <div class="nav-modal">
+        <ul class="ham-list">
+          <li class="ham-item">Features</li>
+          <li class="ham-item">Pricing</li>
+          <li class="ham-item">Resources</li>
+          <hr>
+          <li class="ham-item">Login</li>
+          <li class="ham-item">Sign Up</li>
+        </ul>
+      </div>
+    </div>
   </div>
+
+  
 </template>
 
 <script>
@@ -23,6 +41,18 @@ export default {
   name: 'Header',
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      openNav: false
+    }
+  },
+  methods: {
+    onClick: function(){
+      console.log('click ham', this.openNav)
+      this.openNav = !this.openNav;
+      console.log(this.openNav)
+    }
   },
 };
 </script>
@@ -204,6 +234,35 @@ export default {
 .hamburgerBottom.open {
   transform: rotate(-45deg);
   margin-top: 15px;
+}
+
+.nav-container {
+  display: none
+}
+
+.show {
+  display: block
+}
+
+.nav-container {
+  color: white;
+  position: absolute;
+  top: 12%;
+  width: 80%;
+  left: 10%;
+  border-radius: 1rem;
+  height: 40vh;
+  text-align: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  padding: 2.7rem 3rem 2.7rem 2rem;
+  background-color: $veryDarkBlue;
+  z-index: 1010;
+}
+
+.ham-item {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  list-style: none;
 }
 
 </style>
