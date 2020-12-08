@@ -1,17 +1,36 @@
 <template>
   <section >
     <div class="shorten">
-    <input />
-    <button>Shorten It!</button>
+    <input type="text" @input="onInput"/>
+    <button @click="onClick">Shorten It!</button>
     </div>
+    <ul>
+    <li
+      v-for="url in urls"
+      :url="url"
+      :key="url.short_link"> {{url.short_link}}</li>
+  </ul>
   </section>
 </template>
 
 <script>
 export default {
   name: "Shorten",
-  props: {
-    msg: String,
+  props: ['urls'],
+  data() {
+    return {
+      textInput: ''
+    }
+  },
+  methods: {
+    onInput: function(event) {
+      console.log(event.target.value)
+      this.textInput = event.target.value
+    },
+    onClick: function(){
+      console.log('click')
+      this.$emit('termChange', this.textInput);
+    }
   },
 };
 </script>

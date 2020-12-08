@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <Hero />
-    <Shorten />
+    <Shorten  @termChange="onTermChange" :urls="urls"/>
     <Statistics />
     <Action />
     <Footer />
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import Header from './components/Header.vue';
 import Hero from './components/Hero.vue';
 import Shorten from './components/Shorten.vue';
@@ -26,6 +27,28 @@ export default {
     Statistics,
     Action,
     Footer
+  },
+  data() {
+    return {
+      urls: [],
+    };
+  },
+  methods: {
+
+    async onTermChange(urlString) {
+      console.log('url string' ,urlString)
+       await axios
+        .get(`https://api.shrtco.de/v2/shorten?url=${urlString}`)
+        .then((response) => {
+         console.log(response.data)
+         this.urls.push(response.data.result)
+        })
+        .catch(error => {
+          console.log('error', error)
+        })
+      
+      
+    },
   },
 };
 </script>
