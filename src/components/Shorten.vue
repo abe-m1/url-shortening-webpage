@@ -1,5 +1,5 @@
 <template>
-  <section >
+  <section class="shorten-container">
     <div class="shorten">
     <input type="text" @input="onInput"/>
     <button @click="onClick">Shorten It!</button>
@@ -41,6 +41,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+.shorten-container {
+  background-color: #f0f1f6;
+}
 .shorten {
   background-color: $veryDarkViolet;
   width: 90%;
@@ -48,6 +52,7 @@ export default {
   padding: 2rem;
   border-radius: 5px;
   z-index: 5;
+  margin-bottom: 2rem;
 }
 
 .shorten input {

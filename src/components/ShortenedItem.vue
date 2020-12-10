@@ -16,9 +16,15 @@ export default {
 
 <style scoped lang="scss">
 .item-container {
+  width: 90%;
+  margin: auto;
   padding: 2rem;
   background-color: white;
-  text-align: center;
+  border-radius: 10px;
+
+  &:not(:last-of-type){
+    margin-bottom: 2rem;
+  }
 }
 
 .copy-button {
@@ -39,9 +45,12 @@ hr {
 
 .original-link {
   margin-bottom: 1rem;
+  font-size: 1.6rem;
 }
 
 .short-link {
   color: $cyan;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
 }
 </style>
