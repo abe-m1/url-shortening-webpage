@@ -59,34 +59,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-//mixins
-@mixin respond($breakpoint) {
-  @if $breakpoint == big-desktop {
-    @media (min-width: 1800px) {
-      @content;
-    }
-  }
-  @if $breakpoint == desktop {
-    @media (min-width: 1400px) {
-      @content;
-    }
-  }
-  @if $breakpoint == tab-land {
-    @media (min-width: 1200px) {
-      @content;
-    }
-  }
-  @if $breakpoint == tab-port {
-    @media (min-width: 900px) {
-      @content;
-    }
-  }
-  @if $breakpoint == phone {
-    @media (min-width: 600px) {
-      @content;
-    }
-  }
-}
 
 .header {
   padding: 4rem 2rem;
