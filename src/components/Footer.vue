@@ -2,21 +2,28 @@
   <section >
     <div class="footer container">
        <img class="footer-logo" src="../../images/logo-white.svg" alt="" />
-    <p class="footer-title">Features</p>
-    <p class="footer-item">Link Shortening</p>
-    <p class="footer-item">Branded Links</p>
-    <p class="footer-item">Analytics</p>
-
-    <p class="footer-title">Resources</p>
+    <div>
+      <p class="footer-title">Features</p>
+      <p class="footer-item">Link Shortening</p>
+      <p class="footer-item">Branded Links</p>
+      <p class="footer-item">Analytics</p>
+    </div>
+   
+   <div>
+      <p class="footer-title">Resources</p>
     <p class="footer-item">Blog</p>
     <p class="footer-item">Developers</p>
     <p class="footer-item">Support</p>
-
+   </div>
+   
+  <div>
     <p class="footer-title">Company</p>
     <p class="footer-item">About</p>
     <p class="footer-item">Our Team</p>
     <p class="footer-item">Careers</p>
     <p class="footer-item">Contact</p>
+  </div>
+    
 
      <div class="social">
       <ion-icon name="logo-facebook"></ion-icon>
@@ -42,10 +49,19 @@ export default {
   margin: auto;
   padding: 5rem 2rem;
   text-align: center;
+
+   @include respond(tab-port) {
+      display: flex;
+      justify-content: space-between;
+    }
 }
 
 .footer-logo {
   width: 13rem;
+
+  @include respond(tab-port) {
+    height: 6rem;
+  }
 }
 
 .footer-title {

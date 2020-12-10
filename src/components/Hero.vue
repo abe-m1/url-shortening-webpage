@@ -3,12 +3,14 @@
     <div class="image-container">
       <img src="../../images/illustration-working.svg" />
     </div>
-    <h2>More than just shorter links</h2>
+    <div>
+       <h2>More than just shorter links</h2>
     <p>
       Build your brand’s recognition and get detailed insights on how your links
       are performing.
     </p>
     <button>Get Started</button>
+    </div>
   </section>
 </template>
 
@@ -23,8 +25,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 .hero {
   margin-bottom: 10rem;
+
+  @include respond(tab-port) {
+      display: flex;
+  }
 }
 .hero img {
   margin-bottom: 3rem;
@@ -32,8 +39,12 @@ export default {
 }
 
 .image-container {
-  // width: 100%;
+
    margin-right: -16rem;
+  
+  @include respond(tab-port) {
+      order: 1;
+    }
 }
 
 .hero h2 {

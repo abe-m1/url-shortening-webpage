@@ -61,6 +61,10 @@ export default {
   border-radius: 5px;
   z-index: 5;
   margin-bottom: 2rem;
+
+  @include respond(tab-port) {
+    display: flex;
+  }
 }
 
 .shorten input {
@@ -68,6 +72,10 @@ export default {
   margin-bottom: 1rem;
   padding: 2rem;
   border-radius: 10px;
+
+  @include respond(tab-port) {
+    margin-right: 1rem;
+  }
 }
 
 .shorten button {
@@ -77,6 +85,10 @@ export default {
   background-color: $cyan;
   color: white;
   font-size: 2rem;
+
+  @include respond(tab-port) {
+    width: 30%;
+  }
 }
 
 .loader {

@@ -7,8 +7,11 @@
         <li class="header__menu__menu-item">Pricing</li>
         <li class="header__menu__menu-item">Resources</li>
       </ul>
-      <!-- <button class="button-gradient header-button">Login</button> -->
-      <!-- <button class="button-gradient header-button">Sign Up</button> -->
+      <ul class="header__button">
+        <button class="button-gradient header-button">Login</button>
+        <button class="button-gradient header-button">Sign Up</button> 
+      </ul>
+     
       <div class="hamburger" @click="onClick">
         <div class="hamburgerTop"></div>
         <div class="hamburgerMiddle"></div>
@@ -68,13 +71,22 @@ export default {
   align-items: center;
 
   @include respond(tab-port) {
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding: 0;
   }
 
   &__logo {
     width: 13rem;
+  }
+
+  &__button {
+    
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 
   &__menu {
@@ -139,6 +151,10 @@ export default {
   width: 30px;
   height: 30px;
   margin: 20px;
+
+  @include respond(tab-port) {
+   display:none;
+  }
 }
 
 /* Style of the layers of the hamburger */

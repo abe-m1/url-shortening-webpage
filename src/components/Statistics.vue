@@ -69,6 +69,14 @@ export default {
   color: $gray;
 }
 
+.boxes {
+  @include respond(tab-port) {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+}
+
 .box {
   background-color: white;
   width: 90%;
@@ -77,6 +85,17 @@ export default {
   padding: 2rem;
   border-radius: 5px;
   position: relative;
+
+  @include respond(tab-port) {
+    margin-right: 2rem;
+
+    &:nth-child(1) {
+      margin-top: -4rem;
+    }
+    &:nth-child(1) {
+      margin-top: -6rem;
+    }
+  }
 }
 
 .box:not(:last-child)::after {
@@ -87,6 +106,13 @@ export default {
     left: 50%; 
     height: 5rem; 
     width: 6px;
+
+    @include respond(tab-port) {
+    bottom: 14rem;
+    left: 100%; 
+    height: 6px; 
+    width: 5rem;
+  }
 }
 
 .box-title {
@@ -110,6 +136,10 @@ export default {
   margin: auto;
   margin-top: -6rem;
   margin-bottom: 3rem;
+
+  &:nth-child(1) {
+      margin-left: 2rem;
+    }
 }
 
 </style>
