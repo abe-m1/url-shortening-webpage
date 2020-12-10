@@ -5,18 +5,22 @@
     <button @click="onClick">Shorten It!</button>
     </div>
     <ul>
-    <li
-      v-for="url in urls"
-      :url="url"
-      :key="url.short_link"> {{url.short_link}}</li>
+      <ShortenedItem
+        v-for="url in urls"
+        :url="url"
+        :key="url.short_link"></ShortenedItem>
   </ul>
   </section>
 </template>
 
 <script>
+import ShortenedItem from './ShortenedItem';
 export default {
   name: "Shorten",
   props: ['urls'],
+  components: {
+    ShortenedItem,
+  },
   data() {
     return {
       textInput: ''

@@ -132,5 +132,6 @@ html {
 .container {
   width: 90%;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 </style>
