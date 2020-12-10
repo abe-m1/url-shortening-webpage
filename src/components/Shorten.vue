@@ -2,8 +2,12 @@
   <section class="shorten-container">
     <div class="shorten">
     <input type="text" @input="onInput"/>
-    <button @click="onClick">Shorten It!</button>
+    <div class="error" v-if="this.error">ERROR</div>
+    <button v-if="this.loading === false" @click="onClick">Shorten It!</button>
+    <button v-else ><div class="loader"></div></button>
+    
     </div>
+    
     <ul>
       <ShortenedItem
         v-for="url in urls"
@@ -17,15 +21,17 @@
 import ShortenedItem from './ShortenedItem';
 export default {
   name: "Shorten",
-  props: ['urls'],
+  props: ['urls', 'loading', 'error'],
   components: {
     ShortenedItem,
   },
   data() {
     return {
-      textInput: ''
+      textInput: '',
+      hasError: false
     }
   },
+  
   methods: {
     onInput: function(event) {
       console.log(event.target.value)
@@ -34,6 +40,8 @@ export default {
     onClick: function(){
       console.log('click')
       this.$emit('termChange', this.textInput);
+      this.textInput = '';
+      this.loading = true;
     }
   },
 };
@@ -69,5 +77,24 @@ export default {
   background-color: $cyan;
   color: white;
   font-size: 2rem;
+}
+
+.loader {
+  margin: auto;
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: red;
 }
 </style>

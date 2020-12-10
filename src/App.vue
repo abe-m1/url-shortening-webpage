@@ -2,7 +2,11 @@
   <div id="app">
     <Header />
     <Hero />
-    <Shorten  @termChange="onTermChange" :urls="urls"/>
+    <Shorten  
+      @termChange="onTermChange" 
+      :urls="urls" 
+      :error="error"
+      :loading="loading"/>
     <Statistics />
     <Action />
     <Footer />
@@ -31,20 +35,27 @@ export default {
   data() {
     return {
       urls: [],
+      loading: false,
+      error: false
     };
   },
   methods: {
 
     async onTermChange(urlString) {
       console.log('url string' ,urlString)
+      this.loading = true;
+      this.error = false;
        await axios
         .get(`https://api.shrtco.de/v2/shorten?url=${urlString}`)
         .then((response) => {
          console.log(response.data)
          this.urls.push(response.data.result)
+         this.loading = false
         })
         .catch(error => {
-          console.log('error', error)
+          console.log('error', error);
+          this.error  = true;
+          this.loading = false;
         })
       
       

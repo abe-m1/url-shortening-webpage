@@ -3,7 +3,8 @@
     <p class="original-link">{{url.original_link}}</p>
     <hr>
       <p class="short-link">{{url.short_link}}</p> 
-      <button class="copy-button">Copy</button>
+      <button v-if="this.copied === false" @click="onClick" class="button copy-button">Copy</button>
+      <button v-else class="button copied-button">Copied!</button>
   </li>
 </template>
 
@@ -11,6 +12,16 @@
 export default {
   name: 'ShortenedItem',
   props: ['url'],
+  data() {
+    return {
+      copied: false
+    }
+  },
+  methods: {
+    onClick: function(){
+      this.copied = true;
+    }
+}
 };
 </script>
 
@@ -27,16 +38,22 @@ export default {
   }
 }
 
-.copy-button {
-  width: 100%;
+.button {
+    width: 100%;
    font-size: 2rem;
   display: block;
   padding: 1.5rem 5rem;
   border-radius: 10px;
-  background-color: $cyan;
-  color: white;
   margin: auto;
   border: none;
+  color: white;
+}
+.copy-button {
+  background-color: $cyan; 
+}
+
+.copied-button {
+  background-color: blue;
 }
 
 hr {
