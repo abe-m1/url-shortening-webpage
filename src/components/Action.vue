@@ -19,21 +19,24 @@ export default {
   background-color: #3a3053;
   width: 100%;
   margin: auto;
-  padding: 6rem 2rem;
+  padding: 9rem 2rem;
   text-align: center;
 }
 
 .action p {
   font-size: 3rem;
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .action button {
-  width: 100%;
-  padding: 2rem;
-  border-radius: 10px;
   background-color: $cyan;
   color: white;
+   font-size: 2rem;
+  display: block;
+  padding: 1.5rem 4rem;
+  border-radius: 100px;
+  margin: auto;
+  border: none;
 }
 </style>

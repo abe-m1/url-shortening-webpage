@@ -1,6 +1,8 @@
 <template>
-  <section class="hero">
-    <img src="../../images/illustration-working.svg" />
+  <section class="hero container">
+    <div class="image-container">
+      <img src="../../images/illustration-working.svg" />
+    </div>
     <h2>More than just shorter links</h2>
     <p>
       Build your brand’s recognition and get detailed insights on how your links
@@ -22,27 +24,36 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .hero {
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 .hero img {
   margin-bottom: 3rem;
+ 
+}
+
+.image-container {
+  // width: 100%;
+   margin-right: -16rem;
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   margin-bottom: 2rem;
+  line-height: 1.3;
 }
 
 .hero p {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.3rem;
+  color: $gray;
 }
 
 .hero button {
+  font-size: 2rem;
   display: block;
-  padding: 2rem 4rem;
+  padding: 1.5rem 5rem;
   border-radius: 100px;
   background-color: $cyan;
   color: white;

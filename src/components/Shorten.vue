@@ -50,13 +50,15 @@ export default {
   width: 100%;
   margin-bottom: 1rem;
   padding: 2rem;
+  border-radius: 10px;
 }
 
 .shorten button {
   width: 100%;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
   background-color: $cyan;
   color: white;
+  font-size: 2rem;
 }
 </style>

@@ -2,7 +2,7 @@
   <section class="statistics">
     <div >
     <h2>Advanced Statistics</h2>
-    <p>
+    <p class="statistics-sub">
       Track how your links are performing across the web with our advanced
       statistics dashboard.
     </p>
@@ -22,8 +22,8 @@
         <div class="image-circle">
           <img src="../../images/icon-detailed-records.svg">
         </div>
-        <p>Detailed Records</p>
-        <p>Gain insights into who is clicking your links. Knowing when
+        <p class="box-title">Detailed Records</p>
+        <p class="box-text">Gain insights into who is clicking your links. Knowing when
     and where people engage with your content helps inform better decisions.</p>
       </div>
 
@@ -31,8 +31,8 @@
         <div class="image-circle">
           <img src="../../images/icon-detailed-records.svg">
         </div>
-        <p>Fully Customizable</p>
-        <p>Improve brand awareness and content discoverability
+        <p class="box-title">Fully Customizable</p>
+        <p class="box-text" >Improve brand awareness and content discoverability
     through customizable links, supercharging audience engagement.</p>
       </div>
 
@@ -53,13 +53,20 @@ export default {
 <style scoped lang="scss">
 .statistics {
  background-color: #f0f1f6;
- padding-top: 5rem;
- padding-bottom: 6rem;
+ padding-top: 8rem;
+ padding-bottom: 2rem;
  text-align: center;
 }
 
-.statistics p {
-  margin-bottom: 5rem;
+.statistics h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.statistics-sub {
+  margin-bottom: 8rem;
+  font-size: 1.8rem;
+  color: $gray;
 }
 
 .box {
@@ -79,16 +86,20 @@ export default {
     bottom: -5rem; 
     left: 50%; 
     height: 5rem; 
-    width: 3px;
+    width: 6px;
 }
 
 .box-title {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 700;
+  margin-bottom: 2rem;
+
 }
 
 .box-text {
   font-size: 1.6rem;
+  color: $gray;
+  margin-bottom: 2.5rem;
 }
 
 .image-circle {
@@ -98,7 +109,7 @@ export default {
   width: 30%;
   margin: auto;
   margin-top: -6rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 </style>

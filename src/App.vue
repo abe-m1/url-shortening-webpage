@@ -128,4 +128,9 @@ html {
     font-size: 75%; //1rem = 12px
   }
 }
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 </style>

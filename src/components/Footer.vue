@@ -1,6 +1,7 @@
 <template>
   <section >
-    <div class="footer">
+    <div class="footer container">
+       <img class="footer-logo" src="../../images/logo-white.svg" alt="" />
     <p class="footer-title">Features</p>
     <p class="footer-item">Link Shortening</p>
     <p class="footer-item">Branded Links</p>
@@ -16,6 +17,13 @@
     <p class="footer-item">Our Team</p>
     <p class="footer-item">Careers</p>
     <p class="footer-item">Contact</p>
+
+     <div class="social">
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-twitter"></ion-icon>
+      <ion-icon name="logo-pinterest"></ion-icon>
+      <ion-icon name="logo-instagram"></ion-icon>
+            </div>
     </div>
   </section>
 </template>
@@ -32,14 +40,25 @@ export default {
   background-color: #232027;
   width: 100%;
   margin: auto;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
 }
 
-.footer p {
-  font-size: 2rem;
+.footer-logo {
+  width: 13rem;
+}
+
+.footer-title {
+  font-size: 1.7rem;
   color: white;
+  margin-top: 4rem;
   margin-bottom: 2rem;
+}
+
+.footer-item {
+  font-size: 1.4rem;
+  color: $gray;
+  margin-bottom: 1.3rem;
 }
 
 .action button {
@@ -48,5 +67,27 @@ export default {
   border-radius: 10px;
   background-color: $cyan;
   color: white;
+}
+
+ion-icon {
+  font-size: 35px;
+  color: #fff;
+  margin-left: 1.5rem;
+
+  // &:not(:last-of-type) {
+  //   margin-left: 1.5rem;
+  // }
+
+  // &:hover {
+  //   color: $limeGreen;
+  // }
+
+  // @include respond(tab-port) {
+  //   font-size: 30px;
+  // }
+}
+
+.social {
+  margin-top: 4rem;
 }
 </style>

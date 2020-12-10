@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <header class="header">
       <img class="header__logo" src="../../images/logo.svg" alt="" />
       <ul class="header__menu">
@@ -61,7 +61,7 @@ export default {
 <style lang="scss">
 
 .header {
-  padding: 4rem 2rem;
+  padding: 2rem 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -74,7 +74,7 @@ export default {
   }
 
   &__logo {
-    width: 15rem;
+    width: 13rem;
   }
 
   &__menu {
@@ -147,7 +147,7 @@ export default {
   display: block;
   width: 30px;
   height: 3px;
-  background: black;
+  background: $gray;
 }
 
 /* Animation from open (X) to close (hamburger) */
@@ -230,6 +230,7 @@ export default {
   background-color: $veryDarkBlue;
   z-index: 1010;
 }
+
 
 .ham-item {
   font-size: 2rem;
