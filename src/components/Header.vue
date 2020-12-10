@@ -25,9 +25,9 @@
           <li class="ham-item">Features</li>
           <li class="ham-item">Pricing</li>
           <li class="ham-item">Resources</li>
-          <hr>
+          <hr class="nav-ruler">
           <li class="ham-item">Login</li>
-          <li class="ham-item">Sign Up</li>
+          <button class="ham-button">Sign Up</button>
         </ul>
       </div>
     </div>
@@ -223,19 +223,34 @@ export default {
   width: 80%;
   left: 10%;
   border-radius: 1rem;
-  height: 40vh;
   text-align: center;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  padding: 2.7rem 3rem 2.7rem 2rem;
+  padding: 2.7rem 3rem 3.7rem 3rem;
   background-color: $veryDarkBlue;
   z-index: 1010;
 }
-
 
 .ham-item {
   font-size: 2rem;
   margin-bottom: 2rem;
   list-style: none;
+}
+
+.nav-ruler {
+  border: 1px solid $gray;
+  margin-bottom: 2rem;
+}
+
+.ham-button {
+  font-size: 2rem;
+  width: 100%;
+  display: block;
+  padding: 1.5rem 8rem;
+  border-radius: 100px;
+  background-color: $cyan;
+  color: white;
+  margin: auto;
+  border: none;
 }
 
 </style>
