@@ -8,12 +8,10 @@
           type="text" @input="onInput"/>
           <span class="error" v-if="this.error || this.hasError">{{ this.errorMessage || 'Error'}}</span>
       </div>
-   
-   
-   
-    <button v-if="this.loading === false">Shorten It!</button>
-    <button v-else ><div class="loader"></div></button>
-    
+      <div class="button-container">
+         <button v-if="this.loading === false">Shorten It!</button>
+         <button v-else ><div class="loader"></div></button>
+      </div> 
     </form>
     
     <ul class="results-container">
@@ -79,12 +77,13 @@ export default {
   padding: 2rem;
   border-radius: 5px;
   z-index: 5;
-   background: url(../../images/bg-shorten-mobile.svg) no-repeat center center;
-    background-size: contain;
-    background-color: $veryDarkViolet;
+  background: url(../../images/bg-shorten-mobile.svg) no-repeat center center;
+  background-size: contain;
+  background-color: $veryDarkViolet;
 
   @include respond(tab-port) {
     display: flex;
+    justify-content: flex-start;
     width: 80%;
     padding: 5rem;
     position: relative;
@@ -100,6 +99,7 @@ export default {
   margin-bottom: 1rem;
   padding: 2rem;
   border-radius: 10px;
+  border: none;
 
   @include respond(tab-port) {
     margin-right: 1rem;
@@ -113,23 +113,33 @@ export default {
   background-color: $cyan;
   color: white;
   font-size: 2rem;
+  border: none;
+  transition: 0.3s;
 
-  @include respond(tab-port) {
-    width: 30%;
+  &:hover {
+    background-color: #85f0f0;
   }
 }
 
 .input-container {
-  flex: 1;
+  flex: 70%;
+  @include respond(tab-port) {
   margin-right: 2rem;
+  }
+}
+
+.button-container {
+  flex: 30%;
+
 }
 
 .results-container {
    @include respond(tab-port) {
-    width: 70%;
+    width: 90%;
     margin: auto;
    }
 }
+
 
 .loader {
   margin: auto;

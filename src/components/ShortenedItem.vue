@@ -65,6 +65,11 @@ export default {
 }
 .copy-button {
   background-color: $cyan; 
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
    @include respond(tab-port) {
    margin-left: 2rem;

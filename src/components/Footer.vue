@@ -1,7 +1,7 @@
 <template>
   <section class="footer">
     <div class="footer-container">
-       <img class="footer-logo" src="../../images/logo-white.svg" alt="" />
+      <img class="footer-logo" src="../../images/logo-white.svg" alt="" />
     <div>
       <p class="footer-title">Features</p>
       <p class="footer-item">Link Shortening</p>
@@ -56,6 +56,7 @@ export default {
   width: 90%;
   margin: auto;
   text-align: center;
+  max-width: 1440px;
 
    @include respond(tab-port) {
       display: flex;
@@ -67,7 +68,8 @@ export default {
   width: 13rem;
 
   @include respond(tab-port) {
-    height: 6rem;
+    height: 5rem;
+    margin-top: 4rem;
   }
 }
 
@@ -82,6 +84,11 @@ export default {
   font-size: 1.4rem;
   color: $gray;
   margin-bottom: 1.3rem;
+  transition: 0.3s;
+
+  &:hover {
+    color: $cyan;
+  }
 }
 
 .action button {
@@ -96,18 +103,11 @@ ion-icon {
   font-size: 35px;
   color: #fff;
   margin-left: 1.5rem;
+  transition: 0.3s;
 
-  // &:not(:last-of-type) {
-  //   margin-left: 1.5rem;
-  // }
-
-  // &:hover {
-  //   color: $limeGreen;
-  // }
-
-  // @include respond(tab-port) {
-  //   font-size: 30px;
-  // }
+  &:hover {
+    color: $cyan;
+  }
 }
 
 .social {

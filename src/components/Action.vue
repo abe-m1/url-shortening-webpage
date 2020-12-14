@@ -47,5 +47,10 @@ export default {
   border-radius: 100px;
   margin: auto;
   border: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #85f0f0;
+  }
 }
 </style>

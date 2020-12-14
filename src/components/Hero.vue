@@ -54,6 +54,11 @@ export default {
 }
 
 .text-container {  
+  display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
   @include respond(tab-port) {
       display: flex;
       flex-direction: column;
@@ -99,5 +104,10 @@ export default {
   color: white;
   margin: auto;
   border: none;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 </style>

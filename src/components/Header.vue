@@ -113,25 +113,30 @@ export default {
       padding-top: 3rem;
       border: 3px solid transparent;
 
-      &:hover {
-        border-style: solid;
-        color: blue;
-        border-width: 3px;
-        border-image: linear-gradient(to left, green, orange) 0 0 100% 0/0 0 4px
-          0;
-      }
+      // &:hover {
+      //   border-style: solid;
+      //   color: blue;
+      //   border-width: 3px;
+      //   border-image: linear-gradient(to left, green, orange) 0 0 100% 0/0 0 4px
+      //     0;
+      // }
 
       &:not(:last-child) {
         margin-right: 4rem;
       }
 
       @include respond(tab-port) {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         display: flex;
         align-items: center;
+        color: $gray;
 
         &:not(:last-child) {
           margin-right: 3rem;
+        }
+
+        &:hover {
+          color: black;
         }
       }
       @include respond(tab-land) {
@@ -165,6 +170,11 @@ export default {
   padding: 1.5rem 4rem;
   border: none;
   border-radius: 100px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 /* Main style of the hamburger icon */
