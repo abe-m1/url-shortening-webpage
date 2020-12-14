@@ -1,6 +1,6 @@
 <template>
-  <section >
-    <div class="footer container">
+  <section class="footer">
+    <div class="footer-container">
        <img class="footer-logo" src="../../images/logo-white.svg" alt="" />
     <div>
       <p class="footer-title">Features</p>
@@ -48,6 +48,13 @@ export default {
   width: 100%;
   margin: auto;
   padding: 5rem 2rem;
+  
+
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
   text-align: center;
 
    @include respond(tab-port) {

@@ -10,7 +10,7 @@
     <div class="boxes">
       <div class="box">
         <div class="image-circle">
-          <img src="../../images/icon-detailed-records.svg">
+          <img src="../../images/icon-brand-recognition.svg">
         </div>
         
         <p class="box-title">Brand Recognition</p>
@@ -29,7 +29,7 @@
 
        <div class="box">
         <div class="image-circle">
-          <img src="../../images/icon-detailed-records.svg">
+          <img src="../../images/icon-fully-customizable.svg">
         </div>
         <p class="box-title">Fully Customizable</p>
         <p class="box-text" >Improve brand awareness and content discoverability
@@ -79,7 +79,7 @@ export default {
    @include respond(tab-port) {
     width: 50%;
     margin: auto;
-     margin-bottom: 12rem;
+     margin-bottom: 21rem;
   }
 }
 
@@ -101,15 +101,17 @@ export default {
   position: relative;
 
   @include respond(tab-port) {
-    margin-right: 2rem;
+    margin-right: 3rem;
+    margin-top: -10rem;
+    margin-bottom: 18rem;
 
     &:nth-child(2) {
-      margin-top: -4rem;
-      margin-bottom: 12rem;
+      margin-top: -6rem;
+      margin-bottom: 14rem;
     }
     &:nth-child(3) {
-      margin-top: -6rem;
-       margin-bottom: 16rem;
+      margin-top: -4rem;
+      margin-bottom: 10rem;
     }
   }
 }
@@ -118,9 +120,9 @@ export default {
   content:""; 
     background:$cyan; 
     position: absolute; 
-    bottom: -5rem; 
+    bottom: -8rem; 
     left: 50%; 
-    height: 5rem; 
+    height: 8rem; 
     width: 6px;
 
     @include respond(tab-port) {
@@ -145,10 +147,11 @@ export default {
 }
 
 .image-circle {
-  padding: 1.4rem 1.8rem;
+  padding: 32px 18px;
   background-color: $veryDarkViolet;
-  border-radius: 150px;
-  width: 30%;
+  border-radius: 50%;
+  // width: 30%;
+  width: 120px;
   margin: auto;
   margin-top: -6rem;
   margin-bottom: 3rem;
@@ -156,6 +159,10 @@ export default {
   &:nth-child(1) {
       margin-left: 2rem;
     }
+}
+
+.image-circle img {
+  width: 45px;
 }
 
 </style>

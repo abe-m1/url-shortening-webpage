@@ -35,6 +35,7 @@ export default {
 
   @include respond(tab-port) {
       display: flex;
+      margin-bottom: 8rem;
   }
 }
 .hero img {
@@ -48,7 +49,7 @@ export default {
   
   @include respond(tab-port) {
       order: 1;
-      flex: 50%;
+      flex: 47%;
     }
 }
 
@@ -58,9 +59,8 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      border: 1px solid red;
       padding-left: 12rem;
-      flex: 50%;
+      flex: 53%;
     }
 }
 
@@ -71,7 +71,7 @@ export default {
   line-height: 1.3;
 
   @include respond(tab-port) {
-    font-size: 7rem;
+    font-size: 9rem;
     text-align: left;
   }
 }
@@ -82,6 +82,12 @@ export default {
   margin-bottom: 2.3rem;
   color: $gray;
   width: 60%;
+
+  @include respond(tab-port) {
+    font-size: 2.3rem;
+    text-align: left;
+    width: 80%;
+  }
 }
 
 .hero button {

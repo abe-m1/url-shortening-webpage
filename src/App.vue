@@ -141,7 +141,7 @@ html {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   overflow-x: hidden;
 }

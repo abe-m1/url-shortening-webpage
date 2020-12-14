@@ -85,7 +85,7 @@ export default {
 
   @include respond(tab-port) {
     display: flex;
-    width: 70%;
+    width: 80%;
     padding: 5rem;
     position: relative;
     top: -5rem;
