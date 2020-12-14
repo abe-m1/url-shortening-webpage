@@ -16,11 +16,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .action {
-  background-color: #3a3053;
   width: 100%;
   margin: auto;
   padding: 9rem 2rem;
   text-align: center;
+   background: url(../../images/bg-boost-mobile.svg) no-repeat center center;
+    background-size: contain;
+    background-color: #3a3053;
+
+  @include respond(tab-port) {
+     background: url(../../images/bg-boost-desktop.svg) no-repeat center center;
+    background-size: contain;
+    background-color: #3a3053;
+  }
+  
 }
 
 .action p {

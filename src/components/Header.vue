@@ -8,8 +8,8 @@
         <li class="header__menu__menu-item">Resources</li>
       </ul>
       <ul class="header__button">
-        <button class="button-gradient header-button">Login</button>
-        <button class="button-gradient header-button">Sign Up</button> 
+        <button class="button-gradient header-button-clear">Login</button>
+        <button class="header-button">Sign Up</button> 
       </ul>
      
       <div class="hamburger" @click="onClick">
@@ -73,11 +73,15 @@ export default {
   @include respond(tab-port) {
     width: 100%;
     margin: auto;
-    padding: 0;
+    padding: 3rem 0;
   }
 
   &__logo {
     width: 13rem;
+
+     @include respond(tab-port) {
+      margin-right: 4rem;
+    }
   }
 
   &__button {
@@ -95,6 +99,7 @@ export default {
 
     @include respond(tab-port) {
       display: flex;
+      margin-right: auto;
     }
 
     &__menu-item {
@@ -104,7 +109,6 @@ export default {
 
       list-style: none;
       padding-bottom: 3rem;
-      color: $primary;
       padding-top: 3rem;
       border: 3px solid transparent;
 
@@ -144,6 +148,22 @@ export default {
     //   display: flex;
     // }
   }
+}
+
+.header-button-clear {
+  color: black;
+  padding: 2rem 3rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+.header-button {
+  background-color: $cyan;
+  color: white;
+  padding: 2rem 3rem;
+  border: none;
+  border-radius: 100px;
 }
 
 /* Main style of the hamburger icon */

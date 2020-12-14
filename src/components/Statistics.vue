@@ -56,17 +56,31 @@ export default {
  padding-top: 8rem;
  padding-bottom: 2rem;
  text-align: center;
+
+ @include respond(tab-port) {
+     padding-bottom: 8rem;
+  }
 }
 
 .statistics h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
+
+  @include respond(tab-port) {
+    font-size: 4.5rem;
+  }
 }
 
 .statistics-sub {
   margin-bottom: 8rem;
   font-size: 1.8rem;
   color: $gray;
+
+   @include respond(tab-port) {
+    width: 50%;
+    margin: auto;
+     margin-bottom: 12rem;
+  }
 }
 
 .boxes {
@@ -89,11 +103,13 @@ export default {
   @include respond(tab-port) {
     margin-right: 2rem;
 
-    &:nth-child(1) {
+    &:nth-child(2) {
       margin-top: -4rem;
+      margin-bottom: 12rem;
     }
-    &:nth-child(1) {
+    &:nth-child(3) {
       margin-top: -6rem;
+       margin-bottom: 16rem;
     }
   }
 }

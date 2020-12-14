@@ -1,15 +1,18 @@
 <template>
-  <section class="hero container">
+  <section class="hero">
     <div class="image-container">
       <img src="../../images/illustration-working.svg" />
     </div>
-    <div>
+    <div class="text-container">
        <h2>More than just shorter links</h2>
-    <p>
+      <p>
       Build your brand’s recognition and get detailed insights on how your links
       are performing.
     </p>
-    <button>Get Started</button>
+    <div>
+       <button>Get Started</button>
+    </div>
+   
     </div>
   </section>
 </template>
@@ -28,6 +31,7 @@ export default {
 
 .hero {
   margin-bottom: 10rem;
+  overflow-x: hidden;
 
   @include respond(tab-port) {
       display: flex;
@@ -44,6 +48,19 @@ export default {
   
   @include respond(tab-port) {
       order: 1;
+      flex: 50%;
+    }
+}
+
+.text-container {  
+  @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      border: 1px solid red;
+      padding-left: 12rem;
+      flex: 50%;
     }
 }
 
@@ -52,6 +69,11 @@ export default {
   text-align: center;
   margin-bottom: 2rem;
   line-height: 1.3;
+
+  @include respond(tab-port) {
+    font-size: 7rem;
+    text-align: left;
+  }
 }
 
 .hero p {
@@ -59,6 +81,7 @@ export default {
   text-align: center;
   margin-bottom: 2.3rem;
   color: $gray;
+  width: 60%;
 }
 
 .hero button {

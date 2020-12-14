@@ -1,14 +1,22 @@
 <template>
   <section class="shorten-container">
-    <div class="shorten">
-    <input type="text" @input="onInput"/>
-    <div class="error" v-if="this.error">ERROR</div>
-    <button v-if="this.loading === false" @click="onClick">Shorten It!</button>
+    <form @submit.prevent="onClick" class="shorten">
+      <div class="input-container">
+         <input 
+          :class="hasError && 'input-error'" 
+          placeholder="Shorten a link here..."
+          type="text" @input="onInput"/>
+          <span class="error" v-if="this.error || this.hasError">{{ this.errorMessage || 'Error'}}</span>
+      </div>
+   
+   
+   
+    <button v-if="this.loading === false">Shorten It!</button>
     <button v-else ><div class="loader"></div></button>
     
-    </div>
+    </form>
     
-    <ul>
+    <ul class="results-container">
       <ShortenedItem
         v-for="url in urls"
         :url="url"
@@ -28,7 +36,8 @@ export default {
   data() {
     return {
       textInput: '',
-      hasError: false
+      hasError: false,
+      errorMessage: ''
     }
   },
   
@@ -37,11 +46,22 @@ export default {
       console.log(event.target.value)
       this.textInput = event.target.value
     },
-    onClick: function(){
+    onClick: function(e){
+      e.preventDefault()
+      if (!this.textInput){
+        console.log(this.textInput)
+        this.hasError = true;
+        this.errorMessage = "Please add a link";
+        return;
+      }
       console.log('click')
       this.$emit('termChange', this.textInput);
       this.textInput = '';
       this.loading = true;
+      this.hasError = false;
+      this.errorMessage = '';
+
+      e.target.reset();
     }
   },
 };
@@ -54,16 +74,24 @@ export default {
   background-color: #f0f1f6;
 }
 .shorten {
-  background-color: $veryDarkViolet;
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   padding: 2rem;
   border-radius: 5px;
   z-index: 5;
-  margin-bottom: 2rem;
+   background: url(../../images/bg-shorten-mobile.svg) no-repeat center center;
+    background-size: contain;
+    background-color: $veryDarkViolet;
 
   @include respond(tab-port) {
     display: flex;
+    width: 70%;
+    padding: 5rem;
+    position: relative;
+    top: -5rem;
+    background: url(../../images/bg-shorten-desktop.svg) no-repeat center center;
+    background-size: contain;
+    background-color: $veryDarkViolet;
   }
 }
 
@@ -91,6 +119,18 @@ export default {
   }
 }
 
+.input-container {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.results-container {
+   @include respond(tab-port) {
+    width: 70%;
+    margin: auto;
+   }
+}
+
 .loader {
   margin: auto;
   border: 4px solid #f3f3f3; /* Light grey */
@@ -108,5 +148,9 @@ export default {
 
 .error {
   color: red;
+}
+
+.input-error {
+  border: 2px solid red;
 }
 </style>
