@@ -157,7 +157,7 @@ export default {
   margin-bottom: 3rem;
 
    @include respond(tab-port) {
-      width: 120px;
+      width: 110px;
    }
 
   &:nth-child(1) {

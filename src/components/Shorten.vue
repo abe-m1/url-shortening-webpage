@@ -158,6 +158,7 @@ export default {
 
 .error {
   color: red;
+  font-size: 1.9rem;
 }
 
 .input-error {

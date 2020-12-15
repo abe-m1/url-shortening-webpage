@@ -101,6 +101,7 @@ hr {
 
    @include respond(tab-port) {
    margin-left: auto;
+   margin-bottom: 1rem;
 
    }
 }
