@@ -47,7 +47,7 @@ export default {
   background-color: #232027;
   width: 100%;
   margin: auto;
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   
 
 }
@@ -68,7 +68,7 @@ export default {
   width: 13rem;
 
   @include respond(tab-port) {
-    height: 5rem;
+    height: 4.3rem;
     margin-top: 4rem;
   }
 }

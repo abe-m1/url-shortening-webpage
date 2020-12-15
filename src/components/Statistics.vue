@@ -53,12 +53,13 @@ export default {
 <style scoped lang="scss">
 .statistics {
  background-color: #f0f1f6;
- padding-top: 8rem;
- padding-bottom: 2rem;
+ padding-top: 6.5rem;
+//  padding-bottom: 2rem;
  text-align: center;
 
  @include respond(tab-port) {
-     padding-bottom: 8rem;
+     padding-bottom: 7rem;
+     padding-top: 8rem;
   }
 }
 
@@ -73,7 +74,7 @@ export default {
 
 .statistics-sub {
   margin-bottom: 8rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: $gray;
 
    @include respond(tab-port) {
@@ -147,22 +148,31 @@ export default {
 }
 
 .image-circle {
-  padding: 32px 18px;
+  padding: 29px 10px;
   background-color: $veryDarkViolet;
   border-radius: 50%;
   // width: 30%;
-  width: 120px;
+  width: 100px;
   margin: auto;
   margin-top: -6rem;
   margin-bottom: 3rem;
 
+   @include respond(tab-port) {
+      width: 120px;
+   }
+
   &:nth-child(1) {
+    @include respond(tab-port) {
       margin-left: 2rem;
+    }
     }
 }
 
 .image-circle img {
-  width: 45px;
+   width: 35px;
+   @include respond(tab-port) {
+      width: 45px;
+   }
 }
 
 </style>

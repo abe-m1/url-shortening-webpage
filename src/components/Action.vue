@@ -18,15 +18,15 @@ export default {
 .action {
   width: 100%;
   margin: auto;
-  padding: 9rem 2rem;
+  padding: 7rem 2rem;
   text-align: center;
    background: url(../../images/bg-boost-mobile.svg) no-repeat center center;
-    background-size: contain;
+    background-size: cover;
     background-color: #3a3053;
 
   @include respond(tab-port) {
      background: url(../../images/bg-boost-desktop.svg) no-repeat center center;
-    background-size: contain;
+    background-size: cover;
     background-color: #3a3053;
   }
   
@@ -36,12 +36,15 @@ export default {
   font-size: 3rem;
   color: white;
   margin-bottom: 1.5rem;
+  @include respond(tab-port) {
+     font-size: 4.2rem;
+  }
 }
 
 .action button {
   background-color: $cyan;
   color: white;
-   font-size: 2rem;
+  font-size: 2rem;
   display: block;
   padding: 1.5rem 4rem;
   border-radius: 100px;

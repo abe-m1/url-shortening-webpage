@@ -74,7 +74,6 @@ export default {
     width: 100%;
     margin: auto;
     padding: 3rem 0;
-    margin-bottom: 4rem;
   }
 
   &__logo {
@@ -167,7 +166,7 @@ export default {
 .header-button {
   background-color: $cyan;
   color: white;
-  padding: 1.5rem 4rem;
+  padding: 1.2rem 3rem;
   border: none;
   border-radius: 100px;
   transition: 0.3s;

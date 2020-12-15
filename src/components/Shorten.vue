@@ -74,7 +74,7 @@ export default {
 .shorten {
   width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 5px;
   z-index: 5;
   background: url(../../images/bg-shorten-mobile.svg) no-repeat center center;

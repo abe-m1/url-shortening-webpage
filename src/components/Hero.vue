@@ -35,11 +35,15 @@ export default {
 
   @include respond(tab-port) {
       display: flex;
-      margin-bottom: 8rem;
+      margin-bottom: 12rem;
   }
 }
 .hero img {
   margin-bottom: 3rem;
+  width: 92%;
+  @include respond(tab-port) {
+    width: 100%;
+  }
  
 }
 
@@ -78,6 +82,7 @@ export default {
   @include respond(tab-port) {
     font-size: 9rem;
     text-align: left;
+    margin-bottom: 0;
   }
 }
 
@@ -86,7 +91,7 @@ export default {
   text-align: center;
   margin-bottom: 2.3rem;
   color: $gray;
-  width: 60%;
+  width: 80%;
 
   @include respond(tab-port) {
     font-size: 2.3rem;
