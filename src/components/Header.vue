@@ -112,14 +112,6 @@ export default {
       padding-top: 3rem;
       border: 3px solid transparent;
 
-      // &:hover {
-      //   border-style: solid;
-      //   color: blue;
-      //   border-width: 3px;
-      //   border-image: linear-gradient(to left, green, orange) 0 0 100% 0/0 0 4px
-      //     0;
-      // }
-
       &:not(:last-child) {
         margin-right: 4rem;
       }
@@ -144,14 +136,6 @@ export default {
         }
       }
     }
-
-    // &__button {
-    // font-size: 1.9rem;
-    // display: none;
-
-    // @include respond(tab-port) {
-    //   display: flex;
-    // }
   }
 }
 
@@ -176,7 +160,6 @@ export default {
   }
 }
 
-/* Main style of the hamburger icon */
 .hamburger {
   width: 30px;
   height: 30px;
@@ -187,7 +170,6 @@ export default {
   }
 }
 
-/* Style of the layers of the hamburger */
 .hamburgerTop, .hamburgerMiddle, .hamburgerBottom {
   position: absolute;
   display: block;
@@ -196,19 +178,7 @@ export default {
   background: $gray;
 }
 
-/* Animation from open (X) to close (hamburger) */
 .hamburgerTop, .hamburgerBottom {
-  /*
-   * Parameter explanation:
-   * transform    - rotating back elements
-   * 0.4s         - duration of 'transform'-animation
-   * ease         - animation style for 'transform'
-   *
-   * margin-top   - bring layers to original position
-   * 0.3s         - duration for 'margin-top'
-   * ease         - animation style for 'margin-top'
-   * 0.4s         - wait 0.4s (duration of 'transform') before starting 'margin-top'-animation
-   */
   transition: transform 0.4s ease, margin-top 0.3s ease 0.4s;
 }
 
@@ -216,7 +186,6 @@ export default {
   transition: opacity 0.2s ease 0.5s;
 }
 
-/* Margin between the layers */
 .hamburgerTop {
   margin-top: 7px;
 }
@@ -229,16 +198,10 @@ export default {
   margin-top: 23px;
 }
 
-/* Animation from close (hamburger) to open (X) */
 .hamburgerTop.open, .hamburgerBottom.open {
   transition: margin-top 0.3s ease, transform 0.4s ease 0.3s;
 }
 
-/* 
- * All layers at same position.
- * One layer not visible at all.
- * Two layers forming an 'X'-shape.
- */
 .hamburgerTop.open {
   transform: rotate(45deg);
   margin-top: 15px;

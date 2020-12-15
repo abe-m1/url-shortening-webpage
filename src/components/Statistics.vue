@@ -54,7 +54,6 @@ export default {
 .statistics {
  background-color: #f0f1f6;
  padding-top: 6.5rem;
-//  padding-bottom: 2rem;
  text-align: center;
 
  @include respond(tab-port) {
