@@ -3,6 +3,8 @@
     <form @submit.prevent="onClick" class="shorten">
       <div class="input-container">
          <input 
+          for="link"
+          aria-label="link-input"
           :class="hasError && 'input-error'" 
           placeholder="Shorten a link here..."
           type="text" @input="onInput"/>

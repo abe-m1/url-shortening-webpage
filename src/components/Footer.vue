@@ -1,7 +1,7 @@
 <template>
   <section class="footer">
     <div class="footer-container">
-      <img class="footer-logo" src="../../images/logo-white.svg" alt="" />
+      <img class="footer-logo" src="../../images/logo-white.svg" alt="logo" />
     <div>
       <p class="footer-title">Features</p>
       <p class="footer-item">Link Shortening</p>

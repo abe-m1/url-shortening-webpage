@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="header">
-      <img class="header__logo" src="../../images/logo.svg" alt="" />
+      <img class="header__logo" src="../../images/logo.svg" alt="logo" />
       <ul class="header__menu">
         <li class="header__menu__menu-item">Features</li>
         <li class="header__menu__menu-item">Pricing</li>

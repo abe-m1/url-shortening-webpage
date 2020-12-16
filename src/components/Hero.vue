@@ -1,7 +1,7 @@
 <template>
   <section class="hero">
     <div class="image-container">
-      <img src="../../images/illustration-working.svg" />
+      <img src="../../images/illustration-working.svg" alt="hero-image"/>
     </div>
     <div class="text-container">
        <h2>More than just shorter links</h2>

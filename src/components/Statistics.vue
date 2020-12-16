@@ -10,7 +10,7 @@
     <div class="boxes">
       <div class="box">
         <div class="image-circle">
-          <img src="../../images/icon-brand-recognition.svg">
+          <img src="../../images/icon-brand-recognition.svg" alt="brand-recognition">
         </div>
         
         <p class="box-title">Brand Recognition</p>
@@ -20,7 +20,7 @@
 
       <div class="box">
         <div class="image-circle">
-          <img src="../../images/icon-detailed-records.svg">
+          <img src="../../images/icon-detailed-records.svg" alt="detailed-records">
         </div>
         <p class="box-title">Detailed Records</p>
         <p class="box-text">Gain insights into who is clicking your links. Knowing when
@@ -29,7 +29,7 @@
 
        <div class="box">
         <div class="image-circle">
-          <img src="../../images/icon-fully-customizable.svg">
+          <img src="../../images/icon-fully-customizable.svg" alt="fully-customizable">
         </div>
         <p class="box-title">Fully Customizable</p>
         <p class="box-text" >Improve brand awareness and content discoverability
