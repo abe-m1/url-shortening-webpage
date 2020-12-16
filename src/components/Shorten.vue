@@ -79,6 +79,7 @@ export default {
   z-index: 5;
   background: url(../../images/bg-shorten-mobile.svg) no-repeat center center;
   background-color: $veryDarkViolet;
+   background-size: cover;
 
   @include respond(tab-port) {
     display: flex;
@@ -89,6 +90,7 @@ export default {
     top: -5rem;
     background: url(../../images/bg-shorten-desktop.svg) no-repeat center center;
     background-color: $veryDarkViolet;
+     background-size: cover;
   }
 }
 
