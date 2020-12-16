@@ -68,7 +68,7 @@ export default {
   width: 13rem;
 
   @include respond(tab-port) {
-    height: 4.3rem;
+    height: 4.1rem;
     margin-top: 4rem;
   }
 }

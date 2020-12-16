@@ -120,7 +120,7 @@ export default {
         font-size: 1.6rem;
         display: flex;
         align-items: center;
-        color: $gray;
+        color: $grayishViolet;
 
         &:not(:last-child) {
           margin-right: 3rem;
@@ -145,6 +145,7 @@ export default {
   border: none;
   background-color: transparent;
   border-radius: 100px;
+  font-size: 1.6rem;
 }
 
 .header-button {
@@ -154,6 +155,7 @@ export default {
   border: none;
   border-radius: 100px;
   transition: 0.3s;
+  font-size: 1.6rem;
 
   &:hover {
     opacity: 0.5;

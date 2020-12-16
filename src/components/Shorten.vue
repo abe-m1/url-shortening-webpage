@@ -78,7 +78,6 @@ export default {
   border-radius: 5px;
   z-index: 5;
   background: url(../../images/bg-shorten-mobile.svg) no-repeat center center;
-  background-size: contain;
   background-color: $veryDarkViolet;
 
   @include respond(tab-port) {
@@ -89,7 +88,6 @@ export default {
     position: relative;
     top: -5rem;
     background: url(../../images/bg-shorten-desktop.svg) no-repeat center center;
-    background-size: contain;
     background-color: $veryDarkViolet;
   }
 }
@@ -123,6 +121,7 @@ export default {
 
 .input-container {
   flex: 70%;
+  position: relative;
   @include respond(tab-port) {
   margin-right: 2rem;
   }
@@ -159,6 +158,7 @@ export default {
 .error {
   color: red;
   font-size: 1.9rem;
+  position: absolute;
 }
 
 .input-error {
